@@ -39,6 +39,7 @@ const Navbar = () => {
               {l.label}
             </button>
           ))}
+          <ThemeToggle />
           <Button size="sm" onClick={() => scrollTo("#contact")}>
             Get in Touch
           </Button>
