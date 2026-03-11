@@ -18,18 +18,45 @@ export default {
       },
     },
     extend: {
+      /* ── FONT SYSTEM — Precision Fire ──────────────────────────────
+         heading: Plus Jakarta Sans — authority, warmth, premium SaaS
+         body:    Inter             — maximum readability, zero friction
+         mono:    JetBrains Mono   — code, metrics, technical labels
+         
+         CHANGE FROM ORIGINAL:
+           heading: ["Inter"] → ["Plus Jakarta Sans", "Inter", "sans-serif"]
+           body:    unchanged (Inter)
+           mono:    unchanged (JetBrains Mono)
+         ──────────────────────────────────────────────────────────── */
       fontFamily: {
-        heading: ["Inter", "sans-serif"],
-        body: ["Inter", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"],
+        heading: [
+          "'Plus Jakarta Sans'",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+        body: [
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
+        mono: [
+          "'JetBrains Mono'",
+          "'Fira Code'",
+          "'Cascadia Code'",
+          "monospace",
+        ],
       },
+
+      /* ── COLORS — Precision Fire palette ── */
       colors: {
-        /* ── shadcn/ui semantic tokens (CSS variable–driven) ── */
-        border:      "hsl(var(--border))",
-        input:       "hsl(var(--input))",
-        ring:        "hsl(var(--ring))",
-        background:  "hsl(var(--background))",
-        foreground:  "hsl(var(--foreground))",
+        border:     "hsl(var(--border))",
+        input:      "hsl(var(--input))",
+        ring:       "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT:    "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -58,28 +85,19 @@ export default {
           DEFAULT:    "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-
-        /* ── Neon aliases — repurposed to Precision Fire palette ── */
         neon: {
-          purple: "hsl(var(--neon-purple))",  /* → Obsidian Navy  #0F1D35 */
-          cyan:   "hsl(var(--neon-cyan))",    /* → Steel Blue     #1A3A5C */
-          green:  "hsl(var(--neon-green))",   /* → Signal Orange  #E8620A */
+          purple: "hsl(var(--neon-purple))",
+          cyan:   "hsl(var(--neon-cyan))",
+          green:  "hsl(var(--neon-green))",
         },
-
-        /* ── Brand tokens — Precision Fire hex values ──
-             Use these for explicit brand color references:
-             bg-brand-navy, text-brand-orange, border-brand-blue, etc.
-             These are direct hex values, not theme-aware.
-             Prefer semantic tokens above for theme-switching components. */
         brand: {
-          navy:   "#0F1D35",  /* Tier 01 — Primary    — Obsidian Navy  */
-          blue:   "#1A3A5C",  /* Tier 02 — Secondary  — Steel Blue     */
-          orange: "#E8620A",  /* Tier 03 — Accent/CTA — Signal Orange  */
-          fog:    "#F5F6F8",  /* Tier 04 — Background — Fog White      */
-          carbon: "#111827",  /* Tier 05 — Text       — Carbon         */
-          slate:  "#334155",  /* Tier 06 — Neutral    — Slate 700      */
+          navy:   "#0F1D35",
+          blue:   "#1A3A5C",
+          orange: "#E8620A",
+          fog:    "#F5F6F8",
+          carbon: "#111827",
+          slate:  "#334155",
         },
-
         sidebar: {
           DEFAULT:              "hsl(var(--sidebar-background))",
           foreground:           "hsl(var(--sidebar-foreground))",
@@ -91,11 +109,13 @@ export default {
           ring:                 "hsl(var(--sidebar-ring))",
         },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -114,7 +134,6 @@ export default {
           to:   { opacity: "1" },
         },
         "glow-pulse": {
-          /* Now pulses Signal Orange — Tier 03 accent emphasis */
           "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" },
           "50%":       { boxShadow: "0 0 40px hsl(var(--primary) / 0.6)" },
         },
@@ -131,6 +150,7 @@ export default {
           "50%":       { transform: "translateY(-10px)" },
         },
       },
+
       animation: {
         "accordion-down":  "accordion-down 0.2s ease-out",
         "accordion-up":    "accordion-up 0.2s ease-out",
