@@ -3,24 +3,24 @@ import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ThemeToggle = () => {
-  const [dark, setDark] = useState(() => {
+  const [light, setLight] = useState(() => {
     if (typeof window !== "undefined") {
-      return document.documentElement.classList.contains("dark");
+      return document.documentElement.classList.contains("light");
     }
     return false;
   });
 
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
+    if (light) {
+      document.documentElement.classList.add("light");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("light");
     }
-  }, [dark]);
+  }, [light]);
 
   return (
-    <Button variant="ghost" size="icon" onClick={() => setDark(!dark)} aria-label="Toggle theme">
-      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+    <Button variant="ghost" size="icon" onClick={() => setLight(!light)} aria-label="Toggle theme">
+      {light ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
     </Button>
   );
 };
