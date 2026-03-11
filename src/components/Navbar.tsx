@@ -25,7 +25,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="font-heading text-lg font-bold text-foreground tracking-tight">
-          AutomationPro
+          JeremyRunes Automations
         </a>
 
         {/* Desktop */}

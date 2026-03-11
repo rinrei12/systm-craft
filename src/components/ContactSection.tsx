@@ -39,7 +39,7 @@ const ContactSection = () => {
               </p>
               <Button size="lg" className="gap-2" asChild>
                 <a
-                  href={`mailto:hello@automationpro.com?subject=Booking Request – ${date.toLocaleDateString()}&body=Hi, I'd like to book a consultation on ${date.toLocaleDateString()}.`}
+                  href={`mailto:jeremyrunesautomations@jeremyrunes.com?subject=Booking Request – ${date.toLocaleDateString()}&body=Hi, I'd like to book a consultation on ${date.toLocaleDateString()}.`}
                 >
                   <Mail className="h-4 w-4" />
                   Confirm & Send Request
@@ -51,8 +51,8 @@ const ContactSection = () => {
 
         <p className="mt-8 text-center text-sm text-muted-foreground">
           Or email me directly at{" "}
-          <a href="mailto:hello@automationpro.com" className="text-primary hover:underline">
-            hello@automationpro.com
+          <a href="mailto:jeremyrunesautomations@jeremyrunes.com" className="text-primary hover:underline">
+            jeremyrunesautomations@jeremyrunes.com
           </a>
         </p>
       </div>
