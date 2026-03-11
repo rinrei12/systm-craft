@@ -48,7 +48,7 @@ const PortfolioSection = () => {
                   <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Impact</p>
                   <ul className="space-y-1.5">
                     {p.impact.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <li key={item} className="flex items-start gap-2 text-sm text-foreground/80 text-left">
                         <CheckCircle className="h-4 w-4 mt-0.5 text-accent shrink-0" />
                         {item}
                       </li>
