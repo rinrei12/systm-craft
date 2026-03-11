@@ -50,7 +50,7 @@ const PortfolioSection = () => {
                     {p.impact.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-foreground/80 text-left">
                         <CheckCircle className="h-4 w-4 mt-0.5 text-accent shrink-0" />
-                        {item}
+                        <span className="text-left">{item}</span>
                       </li>
                     ))}
                   </ul>
