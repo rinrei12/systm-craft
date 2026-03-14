@@ -32,7 +32,7 @@ const WorkflowSection = () => {
           {steps.map((s, i) => (
             <div key={s.label} className="flex items-start">
               <div className="flex flex-col items-center text-center w-32 group">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-3 border border-primary/20 group-hover:neon-glow group-hover:bg-primary/20 transition-all duration-300">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-3 border border-primary/20 group-hover:bg-primary/20 transition-all duration-300 hover:shadow-[0_0_20px_rgba(116,161,46,0.4),0_0_60px_rgba(116,161,46,0.15)]">
                   <s.icon className="h-6 w-6" />
                 </div>
                 <p className="font-heading text-sm font-semibold text-foreground">{s.label}</p>
